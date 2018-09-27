@@ -47,7 +47,7 @@ class BaiDuOCR:
 
 if __name__ == '__main__':
     _image = "/home/sun/duola/text-detection-ctpn/data/cutpic/0_5.jpg"
-    AK, SK = 'Yzzftrmi2Z6mGGy8nqsg8DQc', 'LagFcm3I0632r9ZeZEcn7z0d271KMM9y'
+    AK, SK = '*************', '********'
     baidu_ocr = BaiDuOCR(AK, SK)
     result = baidu_ocr.general_basic(baidu_ocr.image_to_base64(_image))
     print(result)
