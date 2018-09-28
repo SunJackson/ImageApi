@@ -6,7 +6,7 @@ from io import BytesIO
 from PIL import Image
 
 
-class BaiDuOCR:
+class BaiduAPI:
     def __init__(self, client_id, client_secret):
         # client_id 为官网获取的AK， client_secret 为官网获取的SK
         host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={}&client_secret={}'\
@@ -46,8 +46,8 @@ class BaiDuOCR:
 
 
 if __name__ == '__main__':
-    _image = "/home/sun/duola/text-detection-ctpn/data/cutpic/0_5.jpg"
+    _image = "/image_path/0_5.jpg"
     AK, SK = '*************', '********'
-    baidu_ocr = BaiDuOCR(AK, SK)
+    baidu_ocr = BaiduAPI(AK, SK)
     result = baidu_ocr.general_basic(baidu_ocr.image_to_base64(_image))
     print(result)
