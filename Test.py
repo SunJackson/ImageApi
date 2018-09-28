@@ -41,10 +41,6 @@ class TESTBAIDU:
                 for words_result in result['words_result']:
                     words.append(words_result['words'].replace(';', '').replace('.', '').replace(',', ''))
                 result_words = ';'.join(words)
-                # crops[0] = str(int(crops[0]) + int(image_location_x)*800)
-                # crops[1] = str(int(crops[1]) + int(image_location_y)*800)
-                # crops[2] = str(int(crops[2]) + int(image_location_x)*800)
-                # crops[3] = str(int(crops[3]) + int(image_location_y)*800)
                 crops.append(result_words)
                 if result_words:
                     fw.write('\t'.join(crops) + '\n')
